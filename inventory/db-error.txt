@@ -1,0 +1,5 @@
+Access denied for user 'root'@'localhost' (using password: YES)| July 1, 2023, 4:24 pm 
+Access denied for user 'root'@'localhost' (using password: YES)| July 1, 2023  5:04pm 
+Access denied for user 'root'@'localhost' (using password: YES)| July 1, 2023  5:07pm 
+php_network_getaddresses: getaddrinfo failed: No such host is known. | July 1, 2023  5:20pm 
+Access denied for user 'root'@'localhost' (using password: YES)| July 5, 2023  8:01pm 

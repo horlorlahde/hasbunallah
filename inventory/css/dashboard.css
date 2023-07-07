@@ -28,11 +28,12 @@ body{
 }
 .dashboard-sidebar{
   width: 20%;
-  background: #CE9F6C;
+  background: #ffdab2;
   height: 100vh;
 }
 .dashboard-container{
   width: 80%;
+  background: rgb(241, 241, 241);
 }
 .dashboard_logo{
   text-align: center;
@@ -45,11 +46,9 @@ body{
   color: rgb(24, 24, 24);
 }
 .dashboard_sidebar_user{
-  padding-top: 20px;
+  padding: 20px;
   position: relative;
-  border: 2px solid white;
-  
-  
+ 
 }
 .dashboard_sidebar_user span{
   font-size: 16px;
@@ -60,7 +59,7 @@ body{
   display: inline-block;
 }
 .dashboard_sidebar_nav{
-  height: 75vh;
+  height: 70vh;
   background: grey;
 }
 .dashboard_nav_list{
@@ -68,15 +67,50 @@ body{
   padding-top: 20px;
 }
 .dashboard_nav_list li{
-  padding: 20px ;
+  padding: 15px 20px  ;
 }
 .dashboard_nav_list li a{
  
   text-decoration: none;
   color: #fff;
   text-transform:uppercase;
+  font-weight: 600;
 }
+
 .dashboard_nav_list li:hover{
-  color: black;
-  background: #f3eddd;
+  background: #f4d7ba;
+  cursor: pointer;
+  transition: 0.6s all;
+}
+
+.dashboard_nav_list .menuActive{
+  background:#ffdab2;
+  cursor: pointer;
+}
+
+.dashboard_topNav{
+  background: white;
+  padding: 20px;
+}
+.dashboard_topNav a{
+  text-decoration: none;
+  color: grey;
+}
+.dashboard_topNav #logoutBtn{
+  float: right;
+}
+.dashboard_content_main{
+  background: #fff;
+  margin-top: 29px;
+  height: 85vh;
+}
+
+footer{
+  background-color: #ffdab2;
+  padding: 6px;
+  text-align: center;
+  color: grey;
+}
+.dashboard_nav_list li a i{
+  font-size: 20px;
 }

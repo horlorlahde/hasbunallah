@@ -1,3 +1,24 @@
+<?php
+  session_start();
+    include "./init/functions.php";
+
+    if(!isset($_SESSION['user_email'])){
+        header("Location: login.php");
+       
+    }else{
+      $sql = "SELECT * FROM register WHERE user_email = '{$_SESSION['user_email']}'";
+      $query = mysqli_query($conn, $sql);
+      $result = mysqli_fetch_assoc($query);
+      $count = mysqli_num_rows($query);
+
+
+      if(isset($_GET['logout'])){
+      logoutUser();
+      }
+     
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,12 +38,12 @@
           </div>
           <div class="dashboard_sidebar_user">
             <img src="./imges/saal.jpg" alt="" class="user-img">
-            <span>Shopade Abdulazeez</span>
+            <span><?php echo ucwords(@$result['username']) ?></span>
           </div>
           <div class="dashboard_sidebar_nav">
             <ul class="dashboard_nav_list">
-              <li>
-                <a href=""><i class="fa fa-dashboard"></i> DASHBOARD</a>
+              <li class="menuActive">
+                <a href="" ><i class="fa fa-dashboard"></i> DASHBOARD</a>
               </li>
               <li>
                 <a href="" ><i class="fa fa-dashboard"></i> DASHBOARD</a>
@@ -38,17 +59,28 @@
         </div>
         <div class="dashboard-container">
           <div class="dashboard_topNav">
-              <a href=""><i class="fa fa-navicon"></i></a>
-              <a href=""><i class="fa fa-power-off"></i> Logout</a>
+              <a href="" id="toggleBtn"><i class="fa fa-navicon"></i></a>
+              <a href="?logout" id="logoutBtn"><i class="fa fa-power-off"></i> Logout</a>
           </div>
           <div class="dashboard_content">
               <div class="dashboard_content_main">
-                
+               
               </div>
-          </div>
+            </div>
+            <footer>
+              <p class="footer">Hasbunallah Enterprises @ 2022 By : Shopade Abdulazeez</p>
+            </footer>
         </div>
     </div> 
 
+
+    <script>
+      toggleBtn.addEventListener("click", (event)=>{
+        event.preventDefault();  
+
+      }
+      );
+    </script>
 
   </body>
 </html>

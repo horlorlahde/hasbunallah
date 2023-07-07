@@ -1,3 +1,12 @@
+<?php
+    include './init/functions.php';
+  if(isset($_SESSION['user_email'])){
+    header("Location: dashboard.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,10 +24,10 @@
         <section>
             <div class="homeContainer">
                 <div class="topnav" id="myTopnav">
-                    <a href="index.html" ><img src="./imges/logo.png" alt="" class="logo"></a>
+                    <a href="index.php" ><img src="./imges/logo.png" alt="" class="logo"></a>
                     <a href="#contact" class="active top">Contact</a>
                     <a href="#about " class="active top">About</a>
-                    <a href="login.html" class="active "> <input type="submit" class="signin" value="Sign In"></a>
+                    <a href="login.php" class="active "> <input type="submit" class="signin" value="Sign In"></a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                       <i class="fa fa-bars"></i>
                     </a>
